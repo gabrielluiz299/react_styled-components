@@ -1,4 +1,4 @@
-import { Vaga, VagaTitulo, VagaLink } from './Vaga'
+import { VagaLi, VagaTitulo, VagaLink } from './Vaga'
 
 type Props = {
   titulo: string
@@ -10,8 +10,8 @@ type Props = {
   requisitos: string[]
 }
 
-const ArrowVaga = (props: Props) => (
-  <Vaga>
+const Vaga = (props: Props) => (
+  <VagaLi>
     <VagaTitulo>{props.titulo}</VagaTitulo>
     <ul>
       <li>Localizacao: {props.localizacao}</li>
@@ -23,7 +23,7 @@ const ArrowVaga = (props: Props) => (
       <li>Requisitos: {props.requisitos.join(', ')}</li>
     </ul>
     <VagaLink href="#">Ver detalhes e candidatar-se</VagaLink>
-  </Vaga>
+  </VagaLi>
 )
 
-export default ArrowVagaVaga
+export default Vaga
